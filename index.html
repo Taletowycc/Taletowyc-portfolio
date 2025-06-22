@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="pageTitle">Taletowyc Design</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/logo.png" alt="Logo" />
+      <span class="navbar-title">Taletowyc Design</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="navbar-menu">
+      <a href="#home" data-i18n="navHome">Početna</a>
+      <a href="#about" data-i18n="navAbout">O meni</a>
+      <a href="#gallery" data-i18n="navWorks">Radovi</a>
+      <a href="#contact" data-i18n="navContact">Kontakt</a>
+      <button id="language-toggle">EN</button>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-text fade-in">
+      <h1 data-i18n="heroTitle">Taletowyc Design</h1>
+      <h2 data-i18n="heroSubtitle">Graphic Designer</h2>
+      <p data-i18n="heroDescription">“Dobrodošli na Taletowyc Design. Vaš partner za kreativna i profesionalna grafička rješenja. Spajam estetiku i funkcionalnost da Vaši vizuali zablistaju.”</p>
+      <a href="#gallery" class="cta-button" data-i18n="heroCta">Pogledaj moje radove</a>
+    </div>
+    <div class="hero-image fade-in">
+      <img src="images/amel.png" alt="Taletowyc Design" />
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2 data-i18n="aboutTitle">O meni</h2>
+    <p data-i18n="aboutText">Ja sam Taletović Amel, grafički dizajner sa više od 4 godina iskustva u kreiranju vizualnih rješenja. Trenutno sam student informatike i računarstva, što mi omogućava da spojim tehničko znanje sa kreativnim pristupom dizajnu.
+
+Dolazim iz Bosne i Hercegovine, a kroz svoj rad pružam usluge izrade logotipa, brendiranja, promotivnih materijala i digitalnih kampanja. Moji radovi odražavaju visok nivo kvaliteta i prilagođeni su jedinstvenim potrebama svakog klijenta, s ciljem da istaknu njihov identitet i osiguraju prepoznatljivost na tržištu.</p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Galerija radova</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-full-image="images/example1-large.jpg" data-title="Logo dizajn za Klijenta A">
+        <img src="images/example1.jpg" alt="Logo projekat" />
+        <h3 data-i18n="project1Title">Logo dizajn</h3>
+        <p data-i18n="project1Desc">Kreiranje jedinstvenog i prepoznatljivog logotipa koji odražava identitet brenda Klijenta A.</p>
+      </div>
+      <div class="gallery-item" data-full-image="images/example2-large.jpg" data-title="Flyer za društvene mreže - Kampanja X">
+        <img src="images/example2.jpg" alt="Flyer dizajn" />
+        <h3 data-i18n="project2Title">Flyer za društvene mreže</h3>
+        <p data-i18n="project2Desc">Dizajn promotivnog flyera optimizovanog za kampanju na društvenim mrežama, privlačan i informativan.</p>
+      </div>
+      <div class="gallery-item" data-full-image="images/example3-large.jpg" data-title="Web dizajn - Projekat Z">
+          <img src="images/example3.jpg" alt="Web dizajn projekat" />
+          <h3 data-i18n="project3Title">Web dizajn</h3>
+          <p data-i18n="project3Desc">Dizajn modernog i funkcionalnog web sajta, fokusiran na korisničko iskustvo i vizualnu estetiku za Projekat Z.</p>
+        </div>
+        <div class="gallery-item" data-full-image="images/example4-large.jpg" data-title="Ambalaža proizvoda - Brend Y">
+          <img src="images/example4.jpg" alt="Dizajn ambalaže" />
+          <h3 data-i18n="project4Title">Dizajn ambalaže</h3>
+          <p data-i18n="project4Desc">Elegantan i profesionalan dizajn vizit karte za Raven Shop, sa svim bitnim informacijama.</p>
+        </div>
+        <div class="gallery-item" data-full-image="images/example5-large.jpg" data-title="Vizit karta - Klijent C">
+            <img src="images/example5.jpg" alt="Vizit karta" />
+            <h3 data-i18n="project5Title">Vizit karta</h3>
+            <p data-i18n="project5Desc">Elegantan i profesionalan dizajn vizit karte za Raven Shop, sa svim bitnim informacijama.</p>
+          </div>
+          <div class="gallery-item" data-full-image="images/example6-large.jpg" data-title="Brošura - Turistička agencija">
+            <img src="images/example6.jpg" alt="Brošura" />
+            <h3 data-i18n="project6Title">Brošura</h3>
+            <p data-i18n="project6Desc">Informativna i vizualno privlačna brošura za turističku agenciju, ističe destinacije i ponude.</p>
+          </div>
+      </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 data-i18n="contactTitle">Kontakt</h2>
+    <form id="contact-form">
+      <label for="name" data-i18n="contactNameLabel">Ime (opcionalno)</label>
+      <input type="text" id="name" name="name" placeholder="Vaše ime" data-i18n-placeholder="contactNamePlaceholder" />
+
+      <label for="phone" data-i18n="contactPhoneLabel">Broj telefona (opcionalno)</label>
+      <input type="tel" id="phone" name="phone" placeholder="Vaš broj telefona" data-i18n-placeholder="contactPhonePlaceholder" />
+
+      <label for="email" data-i18n="contactEmailLabel">Email <span class="required">*</span></label>
+      <input type="email" id="email" name="email" placeholder="Vaš email" data-i18n-placeholder="contactEmailPlaceholder" required />
+
+      <label for="message" data-i18n="contactMessageLabel">Poruka <span class="required">*</span></label>
+      <textarea id="message" name="message" rows="5" placeholder="Vaša poruka" data-i18n-placeholder="contactMessagePlaceholder" required></textarea>
+
+      <button type="submit" data-i18n="contactSubmit">Pošalji</button>
+      <p id="form-message" style="margin-top:10px; font-weight: bold;"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p data-i18n="footerText">© 2025 Taletowyc Design. Sva prava zadržana.</p>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@taletowycdesign8576" target="_blank" aria-label="Youtube"><img src="images/youtube.svg" alt="Youtube"/></a>
+      <a href="https://www.instagram.com/taletowyc_design/" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram"/></a>
+      <a href="https://www.linkedin.com/in/taletowyc-design/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"/></a>
+    </div>
+  </footer>
+
+  <div id="imageModal" class="modal" style="display: none;"> <span class="close-button">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Project Image">
+      <p id="modalCaption"></p>
+      <button class="prev-button">&leftarrow;</button>
+      <button class="next-button">&rightarrow;</button>
+    </div>
+  </div>
+
+  <script>
+    // --- Prevođenje ---
+    const translations = {
+      bs: {
+        pageTitle: 'Taletowyc Design',
+        navHome: 'Početna',
+        navAbout: 'O meni',
+        navWorks: 'Radovi',
+        navContact: 'Kontakt',
+        heroTitle: 'Taletowyc Design',
+        heroSubtitle: 'Grafički Dizajner',
+        heroDescription: '“Dobrodošli na Taletowyc Design. Vaš partner za kreativna i profesionalna grafička rješenja. Spajam estetiku i funkcionalnost da Vaši vizuali zablistaju.”',
+        heroCta: 'Pogledaj moje radove',
+        aboutTitle: 'O meni',
+        aboutText: 'Ja sam Taletović Amel, grafički dizajner sa više od 4 godina iskustva u kreiranju vizualnih rješenja. Trenutno sam student informatike i računarstva, što mi omogućava da spojim tehničko znanje sa kreativnim pristupom dizajnu.\n\nDolazim iz Bosne i Hercegovine, a kroz svoj rad pružam usluge izrade logotipa, brendiranja, promotivnih materijala i digitalnih kampanja. Moji radovi odražavaju visok nivo kvaliteta i prilagođeni su jedinstvenim potrebama svakog klijenta, s ciljem da istaknu njihov identitet i osiguraju prepoznatljivost na tržištu.',
+        galleryTitle: 'Galerija radova',
+        project1Title: 'Logo dizajn',
+        project1Desc: 'Kreiranje jedinstvenog i prepoznatljivog logotipa koji odražava identitet brenda.',
+        project2Title: 'Flyer za društvene mreže',
+        project2Desc: 'Dizajn promotivnog flyera optimizovanog za kampanju na društvenim mrežama, privlačan i informativan.',
+        project3Title: 'Flyer za društvene mreže',
+        project3Desc: 'Dizajn modernog i funkcionalnog post-a i story-a, fokusiran na korisničko iskustvo i vizualnu estetiku.',
+        project4Title: 'Vizit karta',
+        project4Desc: 'Elegantan i profesionalan dizajn vizit karte za Raven Shop, sa svim bitnim informacijama.',
+        project5Title: 'Vizit karta',
+        project5Desc: 'Elegantan i profesionalan dizajn vizit karte za Raven Shop, sa svim bitnim informacijama.',
+        project6Title: 'Menu Dizajn',
+        project6Desc: 'Informativna i vizualno privlačan jelovnik. Menu dizajn izrađen za ugostiteljski objekat s fokusom na jasnu strukturu i moderan izgled.',
+        contactTitle: 'Kontakt',
+        contactNameLabel: 'Ime (opcionalno)',
+        contactNamePlaceholder: 'Vaše ime',
+        contactPhoneLabel: 'Broj telefona (opcionalno)',
+        contactPhonePlaceholder: 'Vaš broj telefona',
+        contactEmailLabel: 'Email',
+        contactEmailPlaceholder: 'Vaš email',
+        contactMessageLabel: 'Poruka',
+        contactMessagePlaceholder: 'Vaša poruka',
+        contactSubmit: 'Pošalji',
+        contactSuccess: 'Hvala, primili smo vašu poruku! (Ova poruka će biti poslana na vaš email klijent)',
+        contactEmailRequired: 'Email je obavezan.',
+        contactMessageRequired: 'Poruka je obavezna.',
+        footerText: '© 2025 Taletowyc Design. Sva prava zadržana.',
+      },
+      en: {
+        pageTitle: 'Taletowyc Design',
+        navHome: 'Home',
+        navAbout: 'About',
+        navWorks: 'Works',
+        navContact: 'Contact',
+        heroTitle: 'Taletowyc Design',
+        heroSubtitle: 'Graphic Designer',
+        heroDescription: '“Welcome to Taletowyc Design. Your partner for creative and professional graphic solutions. I combine aesthetics and functionality to make your visuals shine.”',
+        heroCta: 'View My Works',
+        aboutTitle: 'About Me',
+        aboutText: 'I am Taletović Amel, a graphic designer with over 4 years of experience in creating visual solutions. I am currently a student of computer science, which allows me to combine technical knowledge with a creative approach to design.\n\nI come from Bosnia and Herzegovina, and through my work, I provide services for logo creation, branding, promotional materials, and digital campaigns. My works reflect a high level of quality and are tailored to the unique needs of each client, aiming to highlight their identity and ensure recognition in the market.',
+        galleryTitle: 'Work Gallery',
+        project1Title: 'Logo Design',
+        project1Desc: 'Creating a unique and recognizable logo that reflects the brand identity.',
+        project2Title: 'Social Media Flyer',
+        project2Desc: 'Designing a promotional flyer optimized for a social media campaign, attractive and informative.',
+        project3Title: 'Social Media Flyer',
+        project3Desc: 'Modern and functional post and story design, focused on user experience and visual aesthetics.',
+        project4Title: 'Business Card',
+        project4Desc: 'Elegant and professional business card design for Client C, with all essential information.',
+        project5Title: 'Business Card',
+        project5Desc: 'Elegant and professional business card design for Client C, with all essential information.',
+        project6Title: 'Menu Design',
+        project6Desc: 'Informative and visually appealing menu. Menu design created for a catering facility with a focus on a clear structure and modern look.',
+        contactTitle: 'Contact',
+        contactNameLabel: 'Name (optional)',
+        contactNamePlaceholder: 'Your Name',
+        contactPhoneLabel: 'Phone Number (optional)',
+        contactPhonePlaceholder: 'Your phone number',
+        contactEmailLabel: 'Email',
+        contactEmailPlaceholder: 'Your email',
+        contactMessageLabel: 'Message',
+        contactMessagePlaceholder: 'Your message',
+        contactSubmit: 'Send',
+        contactSuccess: 'Thank you, we have received your message! (This message will be sent to your email client)',
+        contactEmailRequired: 'Email is required.',
+        contactMessageRequired: 'Message is required.',
+        footerText: '© 2025 Taletowyc Design. All rights reserved.',
+      }
+    };
+
+    let currentLanguage = 'bs'; // Početni jezik je bosanski
+    const langToggleBtn = document.getElementById('language-toggle');
+
+    function applyTranslations() {
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.dataset.i18n;
+        if (translations[currentLanguage][key]) {
+          element.textContent = translations[currentLanguage][key];
+        }
+      });
+      // Posebno za placeholder atribute
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.dataset.i18nPlaceholder; // Ispravljeno: i18n-placeholder -> i18nPlaceholder
+        if (translations[currentLanguage][key]) {
+          element.placeholder = translations[currentLanguage][key];
+        }
+      });
+      // Ažuriraj naslov stranice
+      document.title = translations[currentLanguage].pageTitle;
+    }
+
+    // Funkcija za prebacivanje jezika
+    langToggleBtn.addEventListener('click', () => {
+      currentLanguage = (currentLanguage === 'bs') ? 'en' : 'bs';
+      langToggleBtn.textContent = (currentLanguage === 'bs') ? 'EN' : 'BS';
+      applyTranslations();
+    });
+
+    // Primijeni prijevode pri učitavanju stranice
+    document.addEventListener('DOMContentLoaded', () => {
+        applyTranslations();
+        // Osiguraj da je modal skriven na početku
+        document.getElementById('imageModal').style.display = 'none';
+    });
+
+
+    // Validacija i potvrda forme (izmjene za i18n poruke)
+    const form = document.getElementById('contact-form');
+    const messageBox = document.getElementById('form-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = form.name.value.trim();
+      const phone = form.phone.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!email) {
+        messageBox.textContent = translations[currentLanguage].contactEmailRequired;
+        messageBox.style.color = 'red';
+        return;
+      }
+
+      if (!message) {
+        messageBox.textContent = translations[currentLanguage].contactMessageRequired;
+        messageBox.style.color = 'red';
+        return;
+      }
+
+      // PAŽNJA: OVDJE MORATE ZAMIJENITI 'your-email@example.com' SVOJOM STVARNOM EMAIL ADRESOM!
+      const recipientEmail = 'taletowyc3@gmail.com'; // <--- PROMIJENITE OVO U SVOJ EMAIL
+      const subject = encodeURIComponent(`Poruka sa Taletowyc Design stranice (${currentLanguage.toUpperCase()})`);
+      const body = encodeURIComponent(`Ime: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\nPoruka:\n${message}`);
+      window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+
+      messageBox.textContent = translations[currentLanguage].contactSuccess;
+      messageBox.style.color = 'green';
+
+      form.reset();
+    });
+
+    // Hamburger meni funkcionalnost
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.navbar-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Klik na logo vodi na home page
+    document.querySelector('.navbar-logo').addEventListener('click', () => {
+      window.location.href = '#home'; // Skroluje na sekciju sa ID-om 'home'
+    });
+
+    // Slideshow i modal funkcionalnost za galeriju
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    const closeButton = document.querySelector('.close-button');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+
+    let currentImageIndex = 0;
+    let projects = [];
+
+    // Prikuplja podatke o projektima prilikom učitavanja stranice
+    // BITNO: data-title se ne prevodi kroz i18n sistem jer ga preuzima direktno iz HTML atributa.
+    // Ako želite da se naslovi projekata prevode u modalnom prozoru, morat ćete ih dodati
+    // u 'translations' objekat i koristiti odgovarajući ključ za 'modalCaption'.
+    // Trenutno, naslov u modalnom prozoru će biti onaj koji je postavljen u 'data-title' atributu.
+    galleryItems.forEach((item, index) => {
+      projects.push({
+        fullImage: item.dataset.fullImage,
+        title: item.dataset.title // Ovaj naslov je onaj koji se prikazuje u modalnom prozoru
+      });
+
+      item.addEventListener('click', () => {
+        currentImageIndex = index;
+        showModal(currentImageIndex);
+      });
+    });
+
+    function showModal(index) {
+      modal.style.display = 'flex';
+      modalImage.src = projects[index].fullImage;
+      modalCaption.textContent = projects[index].title;
+    }
+
+    function hideModal() {
+      modal.style.display = 'none';
+    }
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % projects.length;
+      showModal(currentImageIndex);
+    }
+
+    function showPrevImage() {
+      currentImageIndex = (currentImageIndex - 1 + projects.length) % projects.length;
+      showModal(currentImageIndex);
+    }
+
+    // Event listeneri za dugmad i pozadinu modala
+    closeButton.addEventListener('click', hideModal);
+    prevButton.addEventListener('click', showPrevImage);
+    nextButton.addEventListener('click', showNextImage);
+
+    // Zatvori modal klikom izvan slike
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        hideModal();
+      }
+    });
+
+    // Zatvori modal pritiskom na ESC tipku
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        hideModal();
+      }
+    });
+  </script>
+
+</body>
+</html>

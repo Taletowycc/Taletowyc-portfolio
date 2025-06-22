@@ -1,0 +1,452 @@
+/* Reset i osnovni stilovi */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #790908;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigacija */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer; /* Dodano za vizualnu indikaciju klika */
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.navbar-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #790908;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-menu a {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#language-toggle {
+  cursor: pointer;
+  background: none;
+  border: 1.5px solid #790908;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #790908;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#language-toggle:hover {
+  background-color: #790908;
+  color: white;
+}
+
+/* Hamburger meni */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #790908;
+  border-radius: 2px;
+}
+
+/* Hero sekcija */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #790908cc, #ff5349cc);
+  color: white;
+  min-height: 70vh;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #790908;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #f4f4f4;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* O meni */
+.about {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #790908;
+}
+
+/* Galerija */
+.gallery {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #790908;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.gallery-item {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  cursor: pointer; /* Dodano za vizualnu indikaciju klika */
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.gallery-item h3 {
+  color: #790908;
+  margin-bottom: 8px;
+}
+
+/* Kontakt forma */
+.contact {
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #790908;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #790908;
+}
+
+.contact button {
+  padding: 14px;
+  background-color: #790908;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: #a31c18;
+}
+
+.required {
+  color: red;
+}
+
+/* Footer */
+footer {
+  background-color: #790908;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s;
+}
+
+.social-icons img:hover {
+  filter: brightness(0) invert(0.7);
+}
+
+/* Animacije */
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal (pozadina) */
+.modal {
+  display: none; /* Skriveno po defaultu */
+  position: fixed; /* Ostaje na mjestu čak i pri skrolanju */
+  z-index: 2000; /* Postavite ga iznad svega ostalog */
+  left: 0;
+  top: 0;
+  width: 100%; /* Puna širina */
+  height: 100%; /* Puna visina */
+  overflow: auto; /* Omogući skrolanje ako je sadržaj prevelik */
+  background-color: rgba(0,0,0,0.9); /* Crna prozirna pozadina */
+  display: flex; /* Koristi flexbox za centriranje */
+  align-items: center; /* Centriraj vertikalno */
+  justify-content: center; /* Centriraj horizontalno */
+}
+
+/* Sadržaj modala */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  position: relative; /* Za pozicioniranje strelica */
+  text-align: center;
+}
+
+.modal-content img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh; /* Ograniči visinu slike unutar modala */
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 8px;
+}
+
+#modalCaption {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+
+/* Dugme za zatvaranje */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 2001; /* Iznad modala */
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Strelice za navigaciju u slideshowu */
+.prev-button, .next-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  transform: translateY(-50%); /* Centriraj vertikalno */
+}
+
+.prev-button {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next-button {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px 0 0 10px;
+    z-index: 999;
+  }
+
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+
+  .navbar-menu a,
+  #language-toggle {
+    margin-bottom: 15px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
